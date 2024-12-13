@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Register from './components/Login/Register';
-import Almacen from './components/MenuAlm/MenuAlm';
-import Registrar from './components/MenuReg/MenuReg';
+import Login from './components/Login/Login.jsx';
+import Register from './components/Login/Register.jsx';
+import Almacen from './components/MenuAlm/MenuAlm.jsx';
+import Registrar from './components/MenuReg/MenuReg.jsx';
 
 const App = () => {
   return (
