@@ -77,41 +77,41 @@ const Almacen = () => {
 
   const handleLogout = () => {
     alert("Has cerrado sesión.");
-    navigate("/");
+    navigate("/"); // Redirige a la página de login
   };
 
   return (
     <div className="container my-4">
       <nav className="navbar navbar-expand-lg navbar-dark custom-navbar">
-              <div className="container-fluid">
-                Almacén
-                <button
-                  className="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarNav"
-                  aria-controls="navbarNav"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span className="navbar-toggler-icon"></span>
+        <div className="container-fluid">
+          Almacén
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to="/registro">
+                  Registrar producto
+                </Link>
+              </li>
+              <li className="nav-item">
+                <button className="btn btn-danger" onClick={handleLogout}>
+                  Logout
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                  <ul className="navbar-nav ms-auto">
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/registrar">
-                        Registrar producto
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <button className="btn btn-danger" onClick={handleLogout}>
-                        Logout
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
       <div className="row">
         {objetos.map((objeto) => (

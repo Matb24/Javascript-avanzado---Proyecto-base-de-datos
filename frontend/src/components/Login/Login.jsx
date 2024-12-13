@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom'; // Importa useNavigate y Link en una sola línea
 import { API_URL_AUTH } from '../../config';
 import "./Login.css";
 
@@ -7,11 +8,12 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate(); // Inicializa navigate
 
   useEffect(() => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `./Login.css?v=${new Date().getTime()}`; // Agrega un parámetro único basado en el tiempo actual
+    link.href = `./Login.css?v=${new Date().getTime()}`;
     document.head.appendChild(link);
     
     // Limpiar el enlace cuando el componente se desmonte
@@ -41,8 +43,8 @@ const Login = () => {
 
       if (response.ok) {
         setMessage('¡Inicio de sesión exitoso!');
-        // Redirigir después del inicio de sesión exitoso
-        window.location.href = '/almacen'; // O redirige a una página en React
+        // Redirigir después del inicio de sesión exitoso usando navigate
+        navigate('/almacen'); // Usar navigate en lugar de window.location.href
       } else {
         setError(data.message || 'Error en el inicio de sesión');
       }
@@ -58,7 +60,7 @@ const Login = () => {
           <div className="col-md-8 col-lg-6 col-xl-5">
             <div className="card shadow-2-strong" style={{ borderRadius: '1rem', padding: '2rem' }}>
               <div className="card-body p-5 text-center">
-              <h3 className="mb-5">Login</h3>
+                <h3 className="mb-5">Login</h3>
                 {/* Mostrar el error si está presente */}
                 {error && <div className="alert alert-danger" id="error-message" style={{ fontSize: '1rem' }}>{error}</div>}
                 {/* Mostrar el mensaje de éxito si está presente */}
@@ -94,9 +96,9 @@ const Login = () => {
                   </button>
                   <p className="mt-3 texto" style={{ fontSize: '1rem' }}>
                     ¿No tienes una cuenta?{' '}
-                    <a href="/register" className="link-primary" id="register-link" style={{ fontSize: '1rem' }}>
+                    <Link to="/register" className="link-primary" id="register-link" style={{ fontSize: '1rem' }}>
                       Registrarse
-                    </a>
+                    </Link>
                   </p>
                 </form>
               </div>

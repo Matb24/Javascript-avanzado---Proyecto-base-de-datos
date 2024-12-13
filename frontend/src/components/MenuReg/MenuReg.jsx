@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { API_URL_ALMACEN } from "../../config";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./MenuReg.css";
 
 const MenuReg = () => {
@@ -13,33 +13,24 @@ const MenuReg = () => {
   const [descripcion, setDescripcion] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
-  const navigate = useNavigate(); // Para la navegación
 
   // useEffect para forzar la recarga del CSS
   useEffect(() => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `./MenuReg.css?v=${new Date().getTime()}`; // Agrega un parámetro único basado en el tiempo actual
+    link.href = `./MenuReg.css?v=${new Date().getTime()}`;
     document.head.appendChild(link);
-  
-    // Limpiar el enlace cuando el componente se desmonte
+
     return () => {
       document.head.removeChild(link);
     };
   }, []);
-
-  // Función para manejar el logout
-  const handleLogout = () => {
-    alert("Has cerrado sesión.");
-    navigate("/"); // Redirige al login
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setMessage("");
 
-    // Verificar que todos los campos estén completos
     if (!nombre || !peso || !cantidad || !fechaIngreso) {
       setError("Todos los campos son obligatorios");
       return;
@@ -68,7 +59,6 @@ const MenuReg = () => {
 
       if (response.status === 201) {
         setMessage("Objeto agregado exitosamente");
-        // Limpiar formulario después de éxito
         setNombre("");
         setPeso("");
         setCantidad("");
@@ -90,7 +80,7 @@ const MenuReg = () => {
       {/* Barra Superior */}
       <nav className="navbar navbar-expand-lg navbar-dark custom-navbar">
         <div className="container-fluid">
-          Almacén
+          <span>Almacén</span>
           <button
             className="navbar-toggler"
             type="button"
@@ -110,9 +100,9 @@ const MenuReg = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <button className="btn btn-danger" onClick={handleLogout}>
+                <Link className="btn btn-danger nav-link" to="/">
                   Logout
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -219,7 +209,9 @@ const MenuReg = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">Registrar Objeto</button>
+        <button type="submit" className="btn btn-primary">
+          Registrar Objeto
+        </button>
       </form>
     </div>
   );
