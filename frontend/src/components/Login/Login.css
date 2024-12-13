@@ -1,0 +1,129 @@
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2d2d;  /* Fondo oscuro */
+  color: #ddd;  /* Texto claro */
+}
+
+.container {
+  width: 100%;  /* Aumenté el ancho al 100% */
+  max-width: 600px;  /* Aumento de tamaño para centrado */
+  margin: 20px auto;
+  background-color: #333;  /* Fondo oscuro */
+  padding: 40px;  /* Aumento de padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.texto{
+  color: #ddd;
+}
+
+h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.8rem;  /* Aumento del tamaño de la fuente */
+}
+
+.form-outline {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px;  /* Aumento del padding */
+  border: 1px solid #555;  /* Bordes más oscuros */
+  border-radius: 5px;
+  background-color: #444;  /* Fondo oscuro en los campos */
+  color: #ddd;  /* Texto claro en los campos */
+}
+
+.form-control::placeholder {
+  color: #bbb;  /* Color claro para los placeholders */
+}
+
+/* Estilo para los botones */
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #777;  /* Cambié el color a un gris claro */
+  color: white;
+  text-align: center;
+  padding: 14px 20px;  /* Aumento del padding */
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #555;  /* Gris más oscuro al pasar el mouse */
+}
+
+/* Estilos de mensajes de error y éxito */
+.alert {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.alert-danger {
+  background-color: #cc2f2f;
+  color: white;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Estilos para el enlace de redirección */
+a.link-primary {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a.link-primary:hover {
+  color: #003366;
+}
+
+/* Estilo para la página completa */
+.vh-100 {
+  min-height: 100vh;
+}
+
+.row.d-flex {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Títulos */
+h3.mb-5 {
+  font-size: 1.8rem; 
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Modificar el tamaño de la tarjeta */
+.card {
+  max-width: 600px;  
+  margin: 0 auto;   
+  padding: 20px;   
+}
+
+/* Modificar el tamaño de los campos de entrada */
+.form-control-lg {
+  font-size: 1.2rem;  
+  padding: 18px;     
+}
+
+/* Modificar el tamaño del botón */
+.btn-lg {
+  font-size: 1.2rem; 
+  padding: 15px 25px; 
+}

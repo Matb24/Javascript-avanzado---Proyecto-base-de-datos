@@ -1,0 +1,169 @@
+/* Estilos principales */
+body {
+  background-color: #2d2d2d;  /* Fondo oscuro */
+  color: #ddd;  /* Color de texto claro */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#contenedorObjetos {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Estilo de las cards */
+.card {
+  background-color: #333;  /* Fondo oscuro */
+  border: 1px solid #555;  /* Bordes más oscuros */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card .info h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.card .info p {
+  margin: 5px 0;
+  color: #ccc;  /* Texto más claro */
+}
+
+/* Colores dinámicos según el estado */
+.card.disponible {
+  border-left: 5px solid #4caf50;
+}
+
+.card.dañado {
+  border-left: 5px solid #f44336;
+}
+
+.card.en {
+  border-left: 5px solid #ff9800;
+}
+
+.card.agotado {
+  border-left: 5px solid #9e9e9e;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #333;  /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: #ffffff;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0;
+  color: #ccc;  /* Color más claro para las etiquetas */
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  background-color: #444;  /* Fondo más oscuro en los campos */
+  border: 1px solid #555;  /* Bordes más oscuros */
+  border-radius: 5px;
+  color: #ddd;  /* Texto claro en los campos */
+}
+
+.modal-content button {
+  background-color: #0056b3;  /* Azul más oscuro */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-content button:hover {
+  background-color: #003366;  /* Azul más oscuro al pasar el mouse */
+}
+
+.modal-content button:nth-child(2) {
+  background-color: #cc2f2f;  /* Rojo más oscuro */
+}
+
+.modal-content button:nth-child(2):hover {
+  background-color: #a32828;  /* Rojo aún más oscuro al pasar el mouse */
+}
+
+/* Estilos personalizados para la barra de navegación */
+.custom-navbar {
+  background-color: #2d2d2d;  /* Fondo oscuro */
+  border-bottom: 2px solid #555;  /* Agregar borde inferior */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #ddd !important;  /* Color de texto claro */
+}
+
+.custom-navbar .nav-link:hover {
+  color: #fff !important;  /* Color más claro al pasar el mouse */
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: #555;  /* Color oscuro para el icono de la barra */
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-color: #ddd;  /* Color claro para el icono del botón de menú */
+}
+
+/* Botón Logout */
+.custom-navbar .btn-danger {
+  background-color: #cc2f2f;  /* Rojo más oscuro */
+  border-color: #a32828;  /* Rojo más oscuro para el borde */
+}
+
+.custom-navbar .btn-danger:hover {
+  background-color: #a32828;  /* Rojo aún más oscuro al pasar el mouse */
+  border-color: #8c2323;
+}

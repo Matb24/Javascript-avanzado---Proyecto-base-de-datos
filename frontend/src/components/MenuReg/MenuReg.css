@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d2d;  /* Fondo oscuro */
+    color: #ddd;  /* Color de texto claro */
+}
+
+.container {
+    width: 80%;  /* Aumenta el tamaño de la caja */
+    max-width: 1000px;  /* Aumenta el ancho máximo */
+    margin: 20px auto;
+    background-color: #333;  /* Fondo oscuro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;  /* Título en color blanco */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc;  /* Etiquetas en color más claro */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;  /* Bordes más oscuros */
+    border-radius: 5px;
+    background-color: #444;  /* Fondo oscuro en los campos */
+    color: #ddd;  /* Texto claro en los campos */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #0056b3;  /* Azul más oscuro */
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #003366;  /* Azul más oscuro al pasar el mouse */
+}
+
+/* Estilos personalizados para la barra de navegación */
+.custom-navbar {
+    background-color: #2d2d2d;  /* Fondo oscuro */
+    border-bottom: 2px solid #555;  /* Agregar borde inferior */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #ddd !important;  /* Color de texto claro */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #fff !important;  /* Color más claro al pasar el mouse */
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: #555;  /* Color oscuro para el icono de la barra */
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-color: #ddd;  /* Color claro para el icono del botón de menú */
+}
+
+/* Botón Logout */
+.custom-navbar .btn-danger {
+    background-color: #cc2f2f;  /* Rojo más oscuro */
+    border-color: #a32828;  /* Rojo más oscuro para el borde */
+}
+
+.custom-navbar .btn-danger:hover {
+    background-color: #a32828;  /* Rojo aún más oscuro al pasar el mouse */
+    border-color: #8c2323;
+}
